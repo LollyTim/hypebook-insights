@@ -2,6 +2,7 @@
 
 import { Heart, MessageCircle, Share2, DollarSign } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 interface ArticleProps {
   title: string;
@@ -30,9 +31,11 @@ export function ArticleCard({ title, excerpt, author, date, readTime }: ArticleP
         </div>
       </div>
 
-      <h2 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors leading-tight">
-        {title}
-      </h2>
+      <Link href="/article">
+        <h2 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors leading-tight cursor-pointer">
+          {title}
+        </h2>
+      </Link>
       
       <p className="text-muted text-sm line-clamp-2 mb-6 leading-relaxed">
         {excerpt}
