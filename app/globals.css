@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0d0d10;
+  --color-foreground: #f2f2f5;
+  --color-card: #141419;
+  --color-border: #333344;
+  --color-primary: #4ddbb2; /* Mint Green */
+  --color-accent: #33b7cc;  /* Teal */
+  --color-muted: #a6a6ad;
+  --color-destructive: #d94a2b;
+  
+  --shadow-mint: 0 0 15px rgba(77, 219, 178, 0.3);
+  --shadow-mint-strong: 0 0 25px rgba(77, 219, 178, 0.5);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+.glow-mint {
+  box-shadow: var(--shadow-mint);
+}
+
+.glow-mint-hover:hover {
+  box-shadow: var(--shadow-mint-strong);
+  border-color: var(--color-primary);
+}
+
+.glass-panel {
+  @apply bg-card border border-border rounded-xl;
+}
